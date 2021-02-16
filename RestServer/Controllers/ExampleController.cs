@@ -28,14 +28,14 @@ namespace RestServer.Controllers
 
         // POST api/<ExampleController>
         [HttpPost]
-        public IActionResult Post([FromBody] string value)
+        public IActionResult Post([FromBody] object value)
         {
-            return Created(value, value);
+            return Created("created", value);
         }
 
         // PUT api/<ExampleController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] object value)
         {
             return NoContent();
         }
